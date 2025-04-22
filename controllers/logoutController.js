@@ -7,6 +7,8 @@ exports.handleLogout = asyncHander(async (req, res) => {
 
   // note: on client, also delete the accessToken
 
+  //get cookies where the refreshToken lives
+  //cookies only accessible when cookie-parser is invoke
   const cookies = req.cookies;
 
   if (!cookies?.jwt) return res.status(204).json({message: "204 No content"})
@@ -29,6 +31,7 @@ exports.handleLogout = asyncHander(async (req, res) => {
   //delete refreshToken in db
   await tokenMethods.deleteRefreshToken(refreshToken);
 
+  //delete refreshToken to cookies
   res.clearCookie(
     "jwt",
      { 
