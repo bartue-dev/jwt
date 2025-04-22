@@ -1,6 +1,7 @@
 const asyncHander = require("express-async-handler");
 const { peopleMethods, userMethods } = require("../../db/queries");
 
+//a helper to access the currentUser
 async function cookiesHelper(req, res) {
   const cookies = req.cookies;
   if (!cookies?.jwt) return res.status(401).json({message: "Wrong token"})
