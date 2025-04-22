@@ -1,7 +1,7 @@
 # Practice JWT
 
 ### Packages needed
-This is an example of how to list things you need to use the software and how to install them.
+JWT [![Next][Next.js]][Next-url].
 * npm
   ```sh
   npm install jsonwebtoken
