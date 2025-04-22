@@ -26,8 +26,8 @@ exports.handleSignin = asyncHander(async (req, res) => {
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: "30s" }
     );
-    // refresh token
 
+    // refresh token
     const refreshToken = jwt.sign(
       { "id": currentUser.id },
       process.env.REFRESH_TOKEN_SECRET,
@@ -37,7 +37,7 @@ exports.handleSignin = asyncHander(async (req, res) => {
     //saving refreshToken with current user in db
     await tokenMethods.savetoken(currentUser.id, refreshToken);
     
-    // save the refreshToke to cookie
+    // save the refreshToken to cookie
     res.cookie(
       "jwt",
       refreshToken,
