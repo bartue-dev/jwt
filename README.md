@@ -2,10 +2,7 @@
 
 ### Packages needed
 JWT
-- ![Static Badge](https://img.shields.io/badge/logo-jsonwebtokens)
-- ![React](https://img.shields.io/badge/REACT-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-
-
+- ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logoColor=white)
 * npm
   ```sh
   npm install jsonwebtoken
