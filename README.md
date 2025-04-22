@@ -13,3 +13,9 @@
    ```sh
    npm install cookie-parser
    ```
+### Others
+- express
+- express-async-handler
+- dotenv
+- bcryptjs
+- prisma
