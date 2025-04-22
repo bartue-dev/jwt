@@ -3,6 +3,7 @@ const asyncHander = require("express-async-handler");
 const jwt = require("jsonwebtoken");
 const { userMethods } = require("../db/queries")
 
+//refreshToken
 exports.handleRefreshToken = asyncHander(async (req, res) => {
   const cookies = req.cookies;
   
