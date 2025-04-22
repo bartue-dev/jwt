@@ -34,9 +34,10 @@ exports.handleSignin = asyncHander(async (req, res) => {
       { expiresIn: "1d" }
     );
 
-    //saving refreshToken with current user
+    //saving refreshToken with current user in db
     await tokenMethods.savetoken(currentUser.id, refreshToken);
     
+    // save the refreshToke to cookie
     res.cookie(
       "jwt",
       refreshToken,
@@ -47,7 +48,7 @@ exports.handleSignin = asyncHander(async (req, res) => {
         maxAge: 24 * 60 * 60 * 1000
       }
     );
-    res.json({ accessToken, refreshToken })
+    res.json({ accessToken })
   } else {
     res.sendStatus(401);
   }
