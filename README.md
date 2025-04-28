@@ -19,3 +19,8 @@
 - dotenv
 - bcryptjs
 - prisma
+
+### To create ACCESS_TOKEN && REFRESH_TOKEN SECRET
+- cli write node hit enter
+- write = require(”crypto”).randomBytes(64).toString(”hex”)
+- this will generate a random text that can be use as a access and refresh secret token
